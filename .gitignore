@@ -1,0 +1,7 @@
+# render scratch
+node_modules/
+stills/
+frames/
+*.tmp.mp4
+# generated audio bed (re-create with: npm run audio)
+examples/noir-lyric-character/assets/*.wav

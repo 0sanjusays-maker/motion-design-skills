@@ -1,13 +1,13 @@
 # motion-design-skills
 
-**Five animation styles as Claude skills.** Pick a look, describe your idea, and Claude builds the video in code and renders an MP4, vertical or horizontal.
+**Six animation styles as Claude skills.** Pick a look, describe your idea, and Claude builds the video in code and renders an MP4, vertical or horizontal.
 
-| 3D toy character | Kinetic typography | Hand-drawn cartoon | System diagram | Data story charts |
-|:-:|:-:|:-:|:-:|:-:|
-| ![3d-toy-character](examples/3d-toy-character.gif) | ![kinetic-typography](examples/kinetic-typography.gif) | ![hand-drawn-cartoon](examples/hand-drawn-cartoon.gif) | ![system-diagram-animation](examples/system-diagram-animation.gif) | ![data-story-charts](examples/data-story-charts.gif) |
-| [MP4](examples/3d-toy-character.mp4) | [MP4](examples/kinetic-typography.mp4) | [MP4](examples/hand-drawn-cartoon.mp4) | [MP4](examples/system-diagram-animation.mp4) | [MP4](examples/data-story-charts.mp4) |
+| 3D toy character | Kinetic typography | Hand-drawn cartoon | System diagram | Data story charts | Noir character lyric |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| ![3d-toy-character](examples/3d-toy-character.gif) | ![kinetic-typography](examples/kinetic-typography.gif) | ![hand-drawn-cartoon](examples/hand-drawn-cartoon.gif) | ![system-diagram-animation](examples/system-diagram-animation.gif) | ![data-story-charts](examples/data-story-charts.gif) | ![noir-character-lyric](examples/noir-character-lyric.gif) |
+| [MP4](examples/3d-toy-character.mp4) | [MP4](examples/kinetic-typography.mp4) | [MP4](examples/hand-drawn-cartoon.mp4) | [MP4](examples/system-diagram-animation.mp4) | [MP4](examples/data-story-charts.mp4) | [MP4](examples/noir-character-lyric.mp4) |
 
-Every example above is the same 15-second story, "A tiny robot learns to fly", made from one SKILL.md each.
+The first five examples are the same 15-second story, "A tiny robot learns to fly", made from one SKILL.md each. The sixth is a full 48-second Hindi lyric film, "गुमराहों का रास्ता", built with the lyric-film skill.
 
 ## The skills
 
@@ -18,6 +18,7 @@ Every example above is the same 15-second story, "A tiny robot learns to fly", m
 | [`hand-drawn-cartoon`](hand-drawn-cartoon/SKILL.md) | Storybook cartoons with boiling ink lines, paper grain and crayon hatching | HyperFrames + SVG + GSAP |
 | [`system-diagram-animation`](system-diagram-animation/SKILL.md) | Architecture and flow diagrams that build node by node, with data packets travelling along the edges | HyperFrames + SVG + GSAP |
 | [`data-story-charts`](data-story-charts/SKILL.md) | Charts that tell a story: lines that draw, counters that tick, axes that rescale on the surprise | HyperFrames + SVG + GSAP |
+| [`noir-character-lyric`](noir-character-lyric/SKILL.md) | Backlit character lyric films: one rigged figure acts the song in a rainy night while lyrics enter as cards | Node + Canvas 2D + FFmpeg |
 
 ## How the skills work
 
@@ -46,7 +47,7 @@ git clone https://github.com/PHANTOMTONYT/motion-design-skills.git
 To use the skills in every project, copy them to `~/.claude/skills/`:
 
 ```bash
-cp -r motion-design-skills/3d-toy-character motion-design-skills/kinetic-typography motion-design-skills/hand-drawn-cartoon motion-design-skills/system-diagram-animation motion-design-skills/data-story-charts ~/.claude/skills/
+cp -r motion-design-skills/3d-toy-character motion-design-skills/kinetic-typography motion-design-skills/hand-drawn-cartoon motion-design-skills/system-diagram-animation motion-design-skills/data-story-charts motion-design-skills/noir-character-lyric ~/.claude/skills/
 ```
 
 Or copy the folders into `.claude/skills/` inside one project. Then ask for a video ("make a 15-second vertical video explaining how a CDN works"), or call a skill directly:
